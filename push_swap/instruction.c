@@ -68,14 +68,14 @@ void ft_pb(LinkedDeque *a, LinkedDeque *b)
 
 void ft_ra(LinkedDeque *a)
 {
-    a->pFrontNode = a->pRearNode;
-    a->pRearNode = a->pFrontNode->pRLink;
+    a->pFrontNode = a->pFrontNode->pLLink;
+    a->pRearNode = a->pRearNode->pLLink;
 }
 
 void ft_rb(LinkedDeque *b)
 {
-    b->pFrontNode = b->pRearNode;
-    b->pRearNode = b->pFrontNode->pRLink;
+    b->pFrontNode = b->pFrontNode->pLLink;
+    b->pRearNode = b->pRearNode->pLLink;
 }
 
 void ft_rr(LinkedDeque *a, LinkedDeque *b)
@@ -87,13 +87,13 @@ void ft_rr(LinkedDeque *a, LinkedDeque *b)
 void ft_rra(LinkedDeque *a)
 {
     a->pFrontNode = a->pFrontNode->pRLink;
-    a->pRearNode = a->pFrontNode->pLLink;
+    a->pRearNode = a->pRearNode->pRLink;
 }
 
 void ft_rrb(LinkedDeque *b)
 {
     b->pFrontNode = b->pFrontNode->pRLink;
-    b->pRearNode = b->pFrontNode->pLLink;
+    b->pRearNode = b->pRearNode->pRLink;
 }
 
 void ft_rrr(LinkedDeque *a, LinkedDeque *b)

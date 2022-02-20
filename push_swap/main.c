@@ -13,12 +13,16 @@ void test(void)
   insertRearLD(a, DN3);
   insertFrontLD(a, DN1);
   insertFrontLD(a, DN0);
-  displayLinkedDeque(a);
-
-  ft_rrb(a);
 
   displayLinkedDeque(a);
-  //deleteLinkedDeque(a);
+  
+  ft_rra(a);
+
+  displayLinkedDeque(a);
+  free(deleteFrontLD(a));
+  displayLinkedDeque(a);
+
+  deleteLinkedDeque(a);
 }
 
 int main()
